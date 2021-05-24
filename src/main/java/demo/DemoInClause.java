@@ -34,7 +34,7 @@ public class DemoInClause {
         Connection connection = DriverManager.getConnection(
                 "jdbc:db2://localhost:50000/testdb",
                 "db2inst1",
-                "Just7Open7It7"
+                "<your-password>"
         );
         String sql = String.format("select * from test.charges c where c.charge_id in (%s)", parameters.parameters);
         PreparedStatement statement = connection.prepareStatement(sql);
